@@ -434,21 +434,21 @@ section {
 /* ABOUT SECTION  */
 /* ABOUT SECTION  */
 
-/* ABOUT SECTION  */
-/* ABOUT SECTION  */
+/* FORMATION SECTION  */
+/* FORMATION SECTION  */
 
 .formation_content {
   display: flex;
   flex-direction: row;
   padding-left: 80px;
   padding-bottom: 40px;
-  /* justify-content: space-around; */
 }
 
 #curriculum_line {
-  width: 3px; /* épaisseur de la ligne */
+  width: 3px;
   background-color: var(--mossgreen);
   margin-right: 30px;
+  flex-shrink: 0;
 }
 
 .formation_container {
@@ -467,35 +467,154 @@ section {
 .formation::before {
   content: "";
   position: absolute;
-  left: -38px; /* alignement avec la ligne */
+  left: -38px;
   top: 10px;
   width: 14px;
   height: 14px;
   background-color: var(--mossgreen);
-  border-radius: 50%; /* rond pour marquer l’étape */
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(84, 95, 49, 0.1);
+  transition: all 0.3s ease;
+}
+
+.formation:hover::before {
+  box-shadow: 0 0 0 8px rgba(84, 95, 49, 0.2);
+  transform: scale(1.2);
 }
 
 .formation_time {
   color: var(--pakistan);
+  font-family: var(--jakarta);
   font-weight: 600;
   font-size: 22px;
 }
 
 .formation_name {
   color: var(--dark);
+  font-family: var(--playfair);
   font-size: 26px;
+  font-weight: 700;
 }
 
 .formation_place {
-  color: gray;
-  font-size: 22px;
+  color: #999;
+  font-family: var(--jakarta);
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .formation_description {
-  font-size: 20px;
+  font-family: var(--jakarta);
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-top: 8px;
 }
-/* ABOUT SECTION  */
-/* ABOUT SECTION  */
+
+@media (max-width: 1024px) {
+  .formation_content {
+    padding-left: 60px;
+    padding-bottom: 30px;
+  }
+
+  #curriculum_line {
+    margin-right: 25px;
+  }
+
+  .formation::before {
+    left: -33px;
+  }
+
+  .formation_container {
+    gap: 60px;
+  }
+
+  .formation_name {
+    font-size: 22px;
+  }
+
+  .formation_time {
+    font-size: 18px;
+  }
+
+  .formation_place {
+    font-size: 14px;
+  }
+
+  .formation_description {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .formation_content {
+    flex-direction: column;
+    padding-left: 0;
+    padding-bottom: 20px;
+  }
+
+  #curriculum_line {
+    width: 100%;
+    height: 3px;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .formation_container {
+    gap: 40px;
+  }
+
+  .formation {
+    gap: 8px;
+  }
+
+  .formation::before {
+    left: -15px;
+    top: -35px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .formation_time {
+    font-size: 16px;
+  }
+
+  .formation_name {
+    font-size: 18px;
+  }
+
+  .formation_place {
+    font-size: 13px;
+  }
+
+  .formation_description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .formation_container {
+    gap: 32px;
+  }
+
+  .formation::before {
+    display: none;
+  }
+
+  .formation_time {
+    font-size: 14px;
+  }
+
+  .formation_name {
+    font-size: 16px;
+  }
+
+  .formation_description {
+    font-size: 13px;
+  }
+}
+/* FORMATION SECTION  */
+/* FORMATION SECTION  */
 
 /* PROJET SECTION  */
 /* PROJET SECTION  */
