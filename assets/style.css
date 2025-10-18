@@ -108,6 +108,7 @@ section {
   border: none;
   cursor: pointer;
   padding: 0;
+  z-index: 1001;
 }
 
 .menu_toggle span {
@@ -141,21 +142,23 @@ section {
   }
 
   #navbar ul {
-    position: absolute;
+    position: fixed;
     top: 60px;
     left: 0;
     width: 100%;
     flex-direction: column;
     gap: 0;
-    background-color: rgba(252, 250, 232, 0.95);
-    padding: 24px 0;
+    background-color: rgba(252, 250, 232, 0.98);
+    padding: 0;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: max-height 0.4s ease;
+    z-index: 999;
   }
 
   #navbar ul.active {
-    max-height: 300px;
+    max-height: 400px;
+    padding: 24px 0;
   }
 
   #navbar li {
@@ -175,10 +178,8 @@ section {
     display: flex;
   }
 }
-
 /* HERO SECTION  */
 /* HERO SECTION  */
-
 #hero_section {
   height: 100vh;
   display: flex;
@@ -186,17 +187,27 @@ section {
   justify-content: center;
   flex-direction: column;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
+  padding: 0 40px;
 }
 
 #hero_section p:first-child {
   font-weight: 600;
-  color: #545f31;
+  color: var(--mossgreen);
+  font-family: var(--jakarta);
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 #hero_section h1 {
   font-family: var(--playfair);
   font-size: 4rem;
+  font-weight: 700;
+  color: var(--dark);
+  line-height: 1.2;
+  margin: 0;
 }
 
 #hero_section h1 span {
@@ -211,45 +222,140 @@ section {
   font-weight: 600;
 }
 
-.hero_contact_button {
-  padding: 10px 30px;
-  background-color: var(--dark);
+.hero_contact_button,
+.hero_projects_button {
+  font-family: var(--jakarta);
+  font-size: 15px;
+  padding: 12px 32px;
+  border-radius: 4px;
   text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.hero_contact_button {
+  background-color: var(--dark);
   color: white;
-  transition: all 0.2s ease;
 }
 
 .hero_contact_button:hover {
   transform: translateY(-2px);
-  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(26, 26, 26, 0.2);
 }
 
 .hero_projects_button {
-  padding: 10px 30px;
   background-color: transparent;
-  text-decoration: none;
   border: 2px solid var(--dark);
   color: var(--dark);
-  transition: all 0.2s ease;
 }
 
 .hero_projects_button:hover {
   transform: translateY(-2px);
   background-color: var(--dark);
   color: #fff;
-  cursor: pointer;
 }
 
 #bubble {
   position: absolute;
   right: -150px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 650px;
   height: 650px;
   border-radius: 50%;
   background-color: var(--mossgreen);
   opacity: 0.4;
+  pointer-events: none;
+  z-index: -1;
 }
 
+@media (max-width: 1024px) {
+  #hero_section {
+    padding: 0 40px;
+  }
+
+  #hero_section h1 {
+    font-size: 3.2rem;
+  }
+
+  #bubble {
+    width: 500px;
+    height: 500px;
+    right: -100px;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero_section {
+    height: auto;
+    min-height: 100vh;
+    padding: 80px 24px;
+    justify-content: center;
+  }
+
+  #hero_section p:first-child {
+    font-size: 14px;
+  }
+
+  #hero_section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero_buttons_container {
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .hero_contact_button,
+  .hero_projects_button {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+
+  #bubble {
+    width: 350px;
+    height: 350px;
+    right: -80px;
+    opacity: 0.25;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero_section {
+    padding: 60px 16px;
+  }
+
+  #hero_section p:first-child {
+    font-size: 12px;
+  }
+
+  #hero_section h1 {
+    font-size: 2rem;
+  }
+
+  .hero_buttons_container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero_contact_button,
+  .hero_projects_button {
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  #bubble {
+    width: 280px;
+    height: 280px;
+    right: -100px;
+    opacity: 0.2;
+  }
+}
 /* HERO SECTION  */
 /* HERO SECTION  */
 
