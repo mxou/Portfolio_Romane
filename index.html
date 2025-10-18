@@ -9,13 +9,18 @@
   <body>
     <nav id="navbar">
       <p>RD.</p>
-      <ul>
-        <li>A propos</li>
-        <li>Formation</li>
-        <li>Projets</li>
-        <li>Compétences</li>
-        <li>Contact</li>
+      <ul id="nav_menu">
+        <li><a href="#about_section">A propos</a></li>
+        <li><a href="#formation_section">Formation</a></li>
+        <li><a href="#projets_section">Projets</a></li>
+        <li><a href="#skills_section">Compétences</a></li>
+        <li><a href="#contact_section">Contact</a></li>
       </ul>
+      <button class="menu_toggle" id="menu_toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
     <section id="hero_section">
       <p>ÉTUDIANTE EN MASTER SOCIOLOGIE</p>
@@ -25,19 +30,41 @@
         <a href="#" class="hero_contact_button">Me contacter</a>
         <a href="#" class="hero_projects_button">Voir mes projets</a>
       </div>
+      <div id="bubble"></div>
     </section>
     <section id="about_section">
       <div class="header_section_container">
         <p class="subtitle_section">INTRODUCTION</p>
-        <p class="title_section">A propos</p>
-        <p class="about_text">
-          Actuellement en Master <span style="font-weight: 800">Villes et Environnements Urbains</span>, parcours mode de vie à l'Université de Lyon 2 et ayant
-          fait une licence de sociologie et géographie; j'ai pu apprendre à maîtriser les différents modes de travail. Qu'ils soient personnels, en groupe,
-          qualitatifs et quantitatifs, je maîtrise les modes d'enquête sur les dynamiques urbaines et sociales. Mon parcours m'a permis d'approfondir mes
-          savoirs et modes de recherches sur différents thèmes tel que la mobilité, les modes d'appropriations des espaces urbains et les pratiques de la ville.
-        </p>
+        <p class="title_section">À propos</p>
       </div>
-      <img src="./assets/media/chouchou_cropped.png" alt="Photo de Romane" class="about_img" />
+
+      <div class="about_content">
+        <div class="about_text_wrapper">
+          <p class="about_intro">Chercheuse en études urbaines et sociales avec une expertise en analyse qualitative et quantitative des dynamiques urbaines.</p>
+
+          <p class="about_text">
+            Actuellement en Master <span class="highlight">Villes et Environnements Urbains</span>, parcours mode de vie à l'Université de Lyon 2 et ayant fait une licence de
+            sociologie et géographie, j'ai pu apprendre à maîtriser les différents modes de travail. Qu'ils soient personnels, en groupe, qualitatifs et quantitatifs, je maîtrise
+            les modes d'enquête sur les dynamiques urbaines et sociales.
+          </p>
+
+          <div class="about_highlights">
+            <div class="highlight_card">
+              <strong>Méthodologies</strong>
+              <p>Études qualitatives, enquêtes quantitatives, analyse spatiale</p>
+            </div>
+            <div class="highlight_card">
+              <strong>Thématiques</strong>
+              <p>Mobilité urbaine, appropriation des espaces, pratiques sociales</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about_img_wrapper">
+          <div class="about_img_background"></div>
+          <img src="./assets/media/chouchou_cropped.png" alt="Photo de Romane" class="about_img" />
+        </div>
+      </div>
     </section>
     <section id="formation_section">
       <div class="header_section_container">
@@ -77,41 +104,129 @@
         <div class="projet">
           <div class="projet_tags">
             <p class="tag">Master</p>
-            <p class="tag">Étude qualitative</p>
+            <p class="tag">Enquête qualitative</p>
           </div>
           <p class="projet_name">Skate & Espace public</p>
           <p class="projet_description">
-            Mémoire sur la pratique du skateboard sur la Place Louis Pradel à Lyon. Analyse de l'appropriation de l'espace public par un groupe et une activité
-            sportive urbaine
+            Mémoire sur la pratique du skateboard sur la Place Louis Pradel à Lyon. Analyse de l'appropriation de l'espace public par un groupe et une activité sportive urbaine
           </p>
-          <a href="#" class="projet_open">Ouvrir le PDF</a>
+          <a href="#" class="projet_open" target="_blank">Ouvrir le PDF</a>
         </div>
         <div class="projet">
           <div class="projet_tags">
             <p class="tag">Master</p>
-            <p class="tag">Étude qualitative</p>
+            <p class="tag">Enquête qualitative</p>
           </div>
-          <p class="projet_name">Skate & Espace public</p>
+          <p class="projet_name">Le quartier de Beligny à Villefranche sur Saône</p>
           <p class="projet_description">
-            Mémoire sur la pratique du skateboard sur la Place Louis Pradel à Lyon. Analyse de l'appropriation de l'espace public par un groupe et une activité
-            sportive urbaine
+            enquête de groupe commandé par Alliade Habitat, sur un QPV (quartier prioritaire de la ville), auprès du voisinage, sur les vécus dans et hors du logement, la mobilité
+            dans ce quartier
           </p>
-          <a href="#" class="projet_open">Ouvrir le PDF</a>
+          <a href="#" class="projet_open" target="_blank">Ouvrir le PDF</a>
         </div>
         <div class="projet">
           <div class="projet_tags">
-            <p class="tag">Master</p>
-            <p class="tag">Étude qualitative</p>
+            <p class="tag">L3</p>
+            <p class="tag">Enquête qualitative</p>
           </div>
-          <p class="projet_name">Skate & Espace public</p>
+          <p class="projet_name">La mobilité à Poitiers</p>
           <p class="projet_description">
-            Mémoire sur la pratique du skateboard sur la Place Louis Pradel à Lyon. Analyse de l'appropriation de l'espace public par un groupe et une activité
-            sportive urbaine
+            Enquête personnelle sur les différents modes de mobilité dans le centre ville de Poitiers, selon les professions et les catégories sociales, ainsi que sur les
+            politiques et les nouveaux aménagements dans le centre historique
           </p>
-          <a href="#" class="projet_open">Ouvrir le PDF</a>
+          <a href="#" class="projet_open" target="_blank">Ouvrir le PDF</a>
+        </div>
+        <div class="projet">
+          <div class="projet_tags">
+            <p class="tag">L2</p>
+            <p class="tag">Enquête quantitative</p>
+          </div>
+          <p class="projet_name">Les publics de l'aide alimentaire à Poitiers</p>
+          <p class="projet_description">
+            Travail de groupe sur les publics de l'aide alimentaire à Poitiers. élaboration d'un questionnaire et passation dans un organisme précis, une association étudiante, qui
+            organise un espace de course solidaire. apprentissage du traitement de données
+          </p>
+          <a href="#" class="projet_open" target="_blank">Ouvrir le PDF</a>
+        </div>
+        <div class="projet">
+          <div class="projet_tags">
+            <p class="tag">L1</p>
+            <p class="tag">Enquête qualitative</p>
+          </div>
+          <p class="projet_name">Le logement des étudiants</p>
+          <p class="projet_description">Travail de groupe sur les différents types de logements des étudiants, leur mobilité ainsi que leur mode de vie autour de ce logement.</p>
+          <a href="#" class="projet_open" target="_blank">Ouvrir le PDF</a>
         </div>
       </div>
     </section>
+    <section id="skills_section">
+      <div class="header_section_container">
+        <p class="subtitle_section">EXPERTISE TECHNIQUE</p>
+        <p class="title_section">Mes compétences</p>
+      </div>
+      <div class="skill_container">
+        <div class="skill">
+          <img class="skill_img" src="./assets/media/skill_img/studior.png" alt="Image du logiciel maîtrisé" />
+          <p class="skill_title">Studio R</p>
+          <p class="skill_desc">Logiciel statistique permettant l’analyse de données et la création de graphiques avancés en langage R.</p>
+        </div>
+
+        <div class="skill">
+          <img class="skill_img" src="./assets/media/skill_img/modalisapng.png" alt="Image du logiciel maîtrisé" />
+          <p class="skill_title">Modalisa</p>
+          <p class="skill_desc">Outil d’enquêtes et d’analyses statistiques utilisé pour concevoir, diffuser et traiter des questionnaires.</p>
+        </div>
+
+        <div class="skill">
+          <img class="skill_img" src="./assets/media/skill_img/qgis.png" alt="Image du logiciel maîtrisé" />
+          <p class="skill_title">QGIS</p>
+          <p class="skill_desc">Système d’information géographique open source pour la cartographie et l’analyse spatiale des données.</p>
+        </div>
+
+        <div class="skill">
+          <img class="skill_img" src="./assets/media/skill_img/excel.png" alt="Image du logiciel maîtrisé" />
+          <p class="skill_title">Excel</p>
+          <p class="skill_desc">Logiciel de tableur permettant le traitement, l’analyse et la visualisation de données à l’aide de formules et graphiques.</p>
+        </div>
+
+        <div class="skill">
+          <img class="skill_img" src="./assets/media/skill_img/canva.png" alt="Image du logiciel maîtrisé" />
+          <p class="skill_title">Canva</p>
+          <p class="skill_desc">Outil de conception graphique intuitif pour créer des présentations, affiches et visuels professionnels.</p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="header_section_container">
+        <p class="subtitle_section">Mon profil vous intérésse ?</p>
+        <p class="title_section">Contactez moi</p>
+      </div>
+      <div class="contact_container">
+        <div class="contact">
+          <div class="contact_image_container">
+            <img src="./assets/media/phone.svg" alt="Icône téléphone" />
+          </div>
+          <p class="contact_subtitle">TÉLÉPHONE</p>
+          <p class="contact_title">07 69 00 61 91</p>
+        </div>
+
+        <div class="contact">
+          <div class="contact_image_container">
+            <img src="./assets/media/at-sign.svg" alt="Icône email" />
+          </div>
+          <p class="contact_subtitle">EMAIL</p>
+          <a href="mailto:rom.dubuc1499@gmail.com" class="contact_title">rom.dubuc1499@gmail.com</a>
+        </div>
+
+        <div class="contact">
+          <div class="contact_image_container">
+            <img src="./assets/media/linkedin.svg" alt="Icône LinkedIn" />
+          </div>
+          <p class="contact_subtitle">LINKEDIN</p>
+          <a href="https://www.linkedin.com/in/rmndubuc" target="_blank" rel="noopener noreferrer" class="contact_title"> rmndubuc </a>
+        </div>
+      </div>
+    </footer>
     <script src="./assets/script.js"></script>
   </body>
 </html>
