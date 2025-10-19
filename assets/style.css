@@ -731,37 +731,6 @@ section {
 
 /* PROJET SECTION  */
 /* PROJET SECTION  */
-/* #projets_section {
-  background-color: #fff;
-}
-
-.projets_container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  row-gap: 20px;
-  column-gap: 20px;
-}
-
-.projet {
-  background-color: var(--ivory);
-  border-radius: 20px;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.projet_tags {
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-}
-
-.projet_name {
-  font-size: 1.5rem;
-  font-weight: 600;
-} */
 
 #projets_section {
   padding: 80px 40px;
