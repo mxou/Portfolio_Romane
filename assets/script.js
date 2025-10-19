@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+  AOS.init();
+
   const menuToggle = document.getElementById("menu_toggle");
   const navMenu = document.getElementById("nav_menu");
 
