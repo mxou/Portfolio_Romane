@@ -622,6 +622,7 @@ section {
   color: #666;
   line-height: 1.6;
   margin-top: 8px;
+  width: 70%;
 }
 
 @media (max-width: 1024px) {
