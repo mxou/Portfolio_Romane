@@ -903,6 +903,7 @@ section {
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
     padding: 0 24px;
+    margin-bottom: 30px;
   }
 
   .skill_img {
