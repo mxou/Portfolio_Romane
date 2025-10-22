@@ -7,7 +7,7 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  /* outline: 1px solid red; */
 }
 
 :root {
@@ -22,6 +22,10 @@
   --playfair: "Playfair Display SC", serif;
   --jakarta: "Plus Jakarta Sans", sans-serif;
   /* FONTS */
+}
+
+html {
+  overflow-x: hidden;
 }
 
 body {
@@ -267,7 +271,8 @@ section {
 
 #bubble {
   position: absolute;
-  right: -150px;
+  /* right: -150px; */
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
   width: 650px;
@@ -277,6 +282,7 @@ section {
   opacity: 0.4;
   pointer-events: none;
   z-index: -1;
+  overflow-x: hidden;
 }
 
 @media (max-width: 1024px) {
@@ -704,6 +710,7 @@ section {
 
   .formation_description {
     font-size: 14px;
+    width: 100%;
   }
 }
 
